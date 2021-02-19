@@ -1,0 +1,9 @@
+{
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true,
+    "python.linting.pylintArgs": [
+        "--extension-pkg-whitelist=pygame"  // The extension is "lxml" not "1xml"
+    ],
+    "python.linting.banditEnabled": false,
+    "python.linting.flake8Enabled": true
+}
