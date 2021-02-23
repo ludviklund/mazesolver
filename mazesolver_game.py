@@ -138,8 +138,8 @@ class Board:
         current_x, current_y = current.get_coords()
         next_x, next_y = next_cell.get_coords()
 
-        offset_x = current_x - next_x # -1 means we going down, 1 means we going up
-        offset_y = current_y - next_y # -1 means we going left, 1 means we going right
+        offset_x = current_x - next_x # -1 means we going down, 1 means up
+        offset_y = current_y - next_y # -1 means we going left, 1 means right
 
         if offset_x == -1:
             # Going down
@@ -235,7 +235,7 @@ def main():
     user_input = input("Enter number of rows and columns seperated by a space: ")
     if user_input:
         user_input = user_input.split(" ")
-        rows, cols = int(user_input[0]), int(user_input[1])
+        rows, cols = [int(x) for x in user_input]
     else:
         rows = cols = 20
 
@@ -246,7 +246,7 @@ def main():
         user_input = input("Enter x and y-coordinate for the starting position, seperated by a space: ")
         if user_input:
             user_input = user_input.split(" ")
-            start_x, start_y = int(user_input[0]), int(user_input[1])
+            start_x, start_y = [int(x) for x in user_input]
         else:
             start_x = start_y = 0
 
